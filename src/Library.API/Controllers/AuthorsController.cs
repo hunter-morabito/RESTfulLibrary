@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace Library.API.Controllers
 {
@@ -25,22 +26,9 @@ namespace Library.API.Controllers
             var authorsFromRepo = _libraryRepository.GetAuthors();
 
             // map the entities to the Dtos
-            var authors = new List<AuthorsDto>();
-
-            foreach (var author in authorsFromRepo)
-            {
-                authors.Add(new AuthorsDto()
-                {
-                    Id = author.Id,
-                    Name = $"{author.FirstName} {author.LastName}",
-                    Genre = author.Genre,
-                    Age = author.DateOfBirth.GetCurrentAge()
-                });
-            }
-
+            var authors = Mapper.Map<IEnumerable<AuthorsDto>>(authorsFromRepo);
             return new JsonResult(authors);
         }
-
 
     }
 }
