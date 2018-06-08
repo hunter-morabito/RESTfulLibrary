@@ -24,3 +24,5 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 * Demo - Getting a Resource Collection
 * Demo - Introducing AutoMappper
 * Demo - Getting a Single Resource
+* The Importance of Status Codes
+* Demo - Returning Correct Status Codes

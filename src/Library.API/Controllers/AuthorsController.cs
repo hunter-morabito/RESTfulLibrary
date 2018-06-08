@@ -27,17 +27,27 @@ namespace Library.API.Controllers
 
             // map the entities to the Dtos
             var authors = Mapper.Map<IEnumerable<AuthorsDto>>(authorsFromRepo);
-            return new JsonResult(authors);
+            return Ok(authors);
         }
 
         // forward slash is added automatically
         [HttpGet("{id}")]
         public IActionResult GetAuthor(Guid id) // Parameter needs to be same name as given in routing
         {
+            //if (!_libraryRepository.AuthorExists(id))
+            //{
+            //    return NotFound();
+            //}
+
             var authorFromRepo = _libraryRepository.GetAuthor(id);
 
+            if(authorFromRepo == null)
+            {
+                return NotFound();
+            }
+
             var author = Mapper.Map<AuthorsDto>(authorFromRepo);
-            return new JsonResult(author);
+            return Ok(author);
         }
 
     }
