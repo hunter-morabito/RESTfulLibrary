@@ -23,3 +23,4 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 * Outer Facing Model vs. Entity Model
 * Demo - Getting a Resource Collection
 * Demo - Introducing AutoMappper
+* Demo - Getting a Single Resource

@@ -30,5 +30,15 @@ namespace Library.API.Controllers
             return new JsonResult(authors);
         }
 
+        // forward slash is added automatically
+        [HttpGet("{id}")]
+        public IActionResult GetAuthor(Guid id) // Parameter needs to be same name as given in routing
+        {
+            var authorFromRepo = _libraryRepository.GetAuthor(id);
+
+            var author = Mapper.Map<AuthorsDto>(authorFromRepo);
+            return new JsonResult(author);
+        }
+
     }
 }
