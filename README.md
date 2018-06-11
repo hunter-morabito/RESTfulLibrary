@@ -27,3 +27,4 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 * The Importance of Status Codes
 * Demo - Returning Correct Status Codes
 * Demo - Handling Faults
+* Demo - Working with Parent/Child Relationships

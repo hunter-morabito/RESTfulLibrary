@@ -26,7 +26,7 @@ namespace Library.API.Controllers
             var authorsFromRepo = _libraryRepository.GetAuthors();
 
             // map the entities to the Dtos
-            var authors = Mapper.Map<IEnumerable<AuthorsDto>>(authorsFromRepo);
+            var authors = Mapper.Map<IEnumerable<AuthorDto>>(authorsFromRepo);
             return Ok(authors);
         }
 
@@ -41,7 +41,7 @@ namespace Library.API.Controllers
                 return NotFound();
             }
 
-            var author = Mapper.Map<AuthorsDto>(authorFromRepo);
+            var author = Mapper.Map<AuthorDto>(authorFromRepo);
             return Ok(author);
         }
 

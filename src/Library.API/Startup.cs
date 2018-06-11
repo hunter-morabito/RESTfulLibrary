@@ -41,9 +41,9 @@ namespace Library.API
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, 
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,
             ILoggerFactory loggerFactory, LibraryContext libraryContext)
-        {           
+        {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -62,16 +62,18 @@ namespace Library.API
 
             AutoMapper.Mapper.Initialize(cfg =>
             {
-                cfg.CreateMap<Entities.Author, Models.AuthorsDto>()
-                .ForMember(dest => dest.Name, opt => opt.MapFrom(src =>
-                $"{src.FirstName} {src.LastName}"))
-                .ForMember(dest => dest.Age, opt => opt.MapFrom(src =>
-                src.DateOfBirth.GetCurrentAge()));
+                cfg.CreateMap<Entities.Author, Models.AuthorDto>()
+                    .ForMember(dest => dest.Name, opt => opt.MapFrom(src =>
+                    $"{src.FirstName} {src.LastName}"))
+                    .ForMember(dest => dest.Age, opt => opt.MapFrom(src =>
+                    src.DateOfBirth.GetCurrentAge()));
+
+                cfg.CreateMap<Book, Models.BookDto>();
             });
 
             libraryContext.EnsureSeedDataForContext();
 
-            app.UseMvc(); 
+            app.UseMvc();
         }
     }
 }
