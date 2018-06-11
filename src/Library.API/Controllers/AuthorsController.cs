@@ -34,14 +34,9 @@ namespace Library.API.Controllers
         [HttpGet("{id}")]
         public IActionResult GetAuthor(Guid id) // Parameter needs to be same name as given in routing
         {
-            //if (!_libraryRepository.AuthorExists(id))
-            //{
-            //    return NotFound();
-            //}
-
             var authorFromRepo = _libraryRepository.GetAuthor(id);
 
-            if(authorFromRepo == null)
+            if (authorFromRepo == null)
             {
                 return NotFound();
             }
