@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Library.API.Entities;
 
 namespace Library.API.Controllers
 {
@@ -31,7 +32,7 @@ namespace Library.API.Controllers
         }
 
         // forward slash is added automatically
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetAuthor")]
         public IActionResult GetAuthor(Guid id) // Parameter needs to be same name as given in routing
         {
             var authorFromRepo = _libraryRepository.GetAuthor(id);
@@ -45,5 +46,29 @@ namespace Library.API.Controllers
             return Ok(author);
         }
 
+        [HttpPost()]
+        public IActionResult CreateAuthor([FromBody] AuthorForCreationDto author)
+        {
+            if(author == null)
+            {
+                return BadRequest();
+            }
+
+            var authorEntity = Mapper.Map<Author>(author);
+
+            _libraryRepository.AddAuthor(authorEntity);
+
+            if (!_libraryRepository.Save())
+            {
+                throw new Exception("Creating an author failed on save.");
+                // return StatusCode(500, "An error happened when handling your request");
+            }
+
+            var authorToReturn = Mapper.Map<AuthorDto>(authorEntity);
+
+            return CreatedAtRoute("GetAuthor",
+                                    new { id = authorToReturn.Id },
+                                    authorToReturn);
+        }
     }
 }

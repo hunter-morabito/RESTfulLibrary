@@ -31,3 +31,8 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 * Formatters and Content Negotiation
 * Demo - Working with Content Negotiation and Output Formatters
 * Summary
+
+### Creating and Deleting Resources
+* Coming Up
+* Method Safety and Method Idempotency
+* Demo - Creating a Resource
