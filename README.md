@@ -5,7 +5,7 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 ### Introducing REST
 * Coming Up
 * Course Prerequisites
-* Tooling 
+* Tooling
 * Introducing REST
 * Learning what the REST Contstraints Are About
 * The Rechardson Maturity Model
@@ -28,3 +28,6 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 * Demo - Returning Correct Status Codes
 * Demo - Handling Faults
 * Demo - Working with Parent/Child Relationships
+* Formatters and Content Negotiation
+* Demo - Working with Content Negotiation and Output Formatters
+* Summary
