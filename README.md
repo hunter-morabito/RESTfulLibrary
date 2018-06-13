@@ -36,3 +36,4 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 * Coming Up
 * Method Safety and Method Idempotency
 * Demo - Creating a Resource
+* Demo - Creating a Child Resource
