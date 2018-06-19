@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Library.API.Entities;
+using Microsoft.AspNetCore.Http;
 
 namespace Library.API.Controllers
 {
@@ -69,6 +70,17 @@ namespace Library.API.Controllers
             return CreatedAtRoute("GetAuthor",
                                     new { id = authorToReturn.Id },
                                     authorToReturn);
+        }
+
+        [HttpPost("{id}")]
+        public IActionResult BlockAuthorCreation(Guid id)
+        {
+            if (_libraryRepository.AuthorExists(id))
+            {
+                return new StatusCodeResult(StatusCodes.Status409Conflict);
+            }
+
+            return NotFound();
         }
     }
 }
