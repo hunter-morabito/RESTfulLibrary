@@ -42,3 +42,4 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 * Demo - Working with Array Keys and Composite Keys
 * Demo - Handling POST to a Single Resource
 * Demo - Supporting Additional Content-type Values and Input Formatters
+* Demo - Deleting a Resource
