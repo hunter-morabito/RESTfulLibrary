@@ -131,6 +131,13 @@ namespace Library.API.Controllers
             Mapper.Map(book, bookForAuthorFromRepo);
 
             _libraryRepository.UpdateBookForAuthor(bookForAuthorFromRepo);
+
+            if (!_libraryRepository.Save())
+            {
+                throw new Exception($"Updating book for author {authorId} failed on Delete");
+            }
+
+            return NoContent();
         }
     }
 }
