@@ -44,3 +44,10 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 * Demo - Supporting Additional Content-type Values and Input Formatters
 * Demo - Deleting a Resource
 * Demo - Deleting a Resource with Child Resources
+* Deleting Collection Resources
+* Summary
+
+### Updating Resources
+* Coming Up
+* Demo - Updating a Resource (Part 1)
+* The Repository Pattern
