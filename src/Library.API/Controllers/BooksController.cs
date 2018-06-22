@@ -119,6 +119,12 @@ namespace Library.API.Controllers
 
             if (!_libraryRepository.AuthorExists(authorId))
             {
+                return NotFound();
+            }
+
+            var bookForAuthorFromRepo = _libraryRepository.GetBookForAuthor(authorId, id);
+            if (bookForAuthorFromRepo == null)
+            {
                 var bookToAdd = Mapper.Map<Book>(book);
                 bookToAdd.Id = id;
 
@@ -135,12 +141,6 @@ namespace Library.API.Controllers
                 return CreatedAtRoute("GetBookForAuthor",
                     new { authorId = authorId, id = bookToReturn.Id}
                     , bookToReturn);
-            }
-
-            var bookForAuthorFromRepo = _libraryRepository.GetBookForAuthor(authorId, id);
-            if (bookForAuthorFromRepo == null)
-            {
-                return NotFound();
             }
 
             Mapper.Map(book, bookForAuthorFromRepo);
