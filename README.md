@@ -55,3 +55,5 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 * Updating Collection Resources
 * Upserting
 * Demo - Upserting with PUT
+* Partially Updating a Resource
+* Demo - Partailly Updating a Resource
