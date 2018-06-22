@@ -52,3 +52,6 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 * Demo - Updating a Resource (Part 1)
 * The Repository Pattern
 * Demo - Updating a Resource (Part 2)
+* Updating Collection Resources
+* Upserting
+* Demo - Upserting with PUT
