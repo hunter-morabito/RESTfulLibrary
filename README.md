@@ -58,3 +58,10 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 * Partially Updating a Resource
 * Demo - Partailly Updating a Resource
 * Demo - Upserting with PATCH
+* HTTP Method Overview by Use Case
+* Summary
+
+### Working with Validation and Logging
+* Coming Up
+* Working with Validation in a RESTful World
+* Demo - Working with Validation on POST
