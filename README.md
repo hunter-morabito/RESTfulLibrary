@@ -69,3 +69,5 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 * Demo - Working with Validation on PATCH
 * Demo - Logging Faults
 * Demo - Logging Errors and Other Information
+* Demo - Logging to a File
+* Summary
