@@ -232,9 +232,10 @@ namespace Library.API.Controllers
 
             var bookToPatch = Mapper.Map<BookForUpdateDto>(bookForAuthorFromRepo);
 
-            patchDoc.ApplyTo(bookToPatch, ModelState);
+            //patchDoc.ApplyTo(bookToPatch, ModelState);
+            patchDoc.ApplyTo(bookToPatch);
 
-            if(bookToPatch.Description == bookToPatch.Title)
+            if (bookToPatch.Description == bookToPatch.Title)
             {
                 ModelState.AddModelError(nameof(BookForUpdateDto),
                    "The title needs to be different from the description");
