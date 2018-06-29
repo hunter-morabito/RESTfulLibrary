@@ -66,3 +66,4 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 * Working with Validation in a RESTful World
 * Demo - Working with Validation on POST
 * Demo - Working with Validation on PUT
+* Demo - Working with Validation on PATCH
