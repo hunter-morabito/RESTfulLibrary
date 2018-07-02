@@ -56,9 +56,6 @@ namespace Library.API
 
             loggerFactory.AddDebug(LogLevel.Information);
 
-            // loggerFactory.AddProvider(new NLog.Extensions.Logging.NLogLoggerProvider());
-            // loggerFactory.AddNLog(); FOR ASP.NET Core 1
-
 
             if (env.IsDevelopment())
             {

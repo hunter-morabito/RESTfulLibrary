@@ -71,3 +71,9 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 * Demo - Logging Errors and Other Information
 * Demo - Logging to a File
 * Summary
+
+### Implementing Paging, Filtering, and Searching
+* Coming Up
+* Paging Through Collection Resources
+* The Principle of Deferred Execution
+* Demo - Paging Through Collection Resources (Part 1)
