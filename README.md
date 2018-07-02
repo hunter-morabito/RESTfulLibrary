@@ -77,3 +77,5 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 * Paging Through Collection Resources
 * The Principle of Deferred Execution
 * Demo - Paging Through Collection Resources (Part 1)
+* Returning Pagination Metadata
+* Demo - Paging Through Collection Resources (Part 2)
