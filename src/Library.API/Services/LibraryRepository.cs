@@ -73,13 +73,23 @@ namespace Library.API.Services
 
             if (!string.IsNullOrEmpty(authorsResourceParameters.Genre))
             {
-                var genreFromWhereClause = authorsResourceParameters.Genre
+                var genreForWhereClause = authorsResourceParameters.Genre
                         .Trim().ToLowerInvariant();
                 collectionBeforePaging = collectionBeforePaging
-                    .Where(a => a.Genre.ToLowerInvariant() == genreFromWhereClause);
+                    .Where(a => a.Genre.ToLowerInvariant() == genreForWhereClause);
             }
 
-            return PagedList<Author>.Create(collectionBeforePaging,
+            if (!string.IsNullOrEmpty(authorsResourceParameters.SearchQuery))
+            {
+                var searchQueryForWhereClause = authorsResourceParameters.SearchQuery
+                        .Trim().ToLowerInvariant();
+                collectionBeforePaging = collectionBeforePaging
+                    .Where(a => a.Genre.ToLowerInvariant().Contains(searchQueryForWhereClause)
+                    || a.FirstName.ToLowerInvariant().Contains(searchQueryForWhereClause)
+                    || a.LastName.ToLowerInvariant().Contains(searchQueryForWhereClause));
+            }
+
+                return PagedList<Author>.Create(collectionBeforePaging,
                                             authorsResourceParameters.PageNumber,
                                             authorsResourceParameters.PageSize);
         }
