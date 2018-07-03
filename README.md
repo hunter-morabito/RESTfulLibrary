@@ -79,3 +79,4 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 * Demo - Paging Through Collection Resources (Part 1)
 * Returning Pagination Metadata
 * Demo - Paging Through Collection Resources (Part 2)
+* Demo - Filtering Collection Resources
