@@ -82,3 +82,8 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 * Demo - Filtering Collection Resources
 * Demo - Searching Through Collection Resources
 * Summary
+
+### Implementing Sorting and Data Shaping
+* Coming Up
+* Sorting Collection Resources
+* Demo - Sorting Collection Resources
