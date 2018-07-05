@@ -87,3 +87,5 @@ This project was completed alongside the 'Building RESTful API with ASP.NET Core
 * Coming Up
 * Sorting Collection Resources
 * Demo - Sorting Collection Resources
+* Creating a Property Mapping Service
+* Demo - Creating a Property Mapping Service
