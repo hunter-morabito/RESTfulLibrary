@@ -7,14 +7,14 @@ namespace Library.API.Services
 {
     public class PropertyMappingValue
     {
-        public IEnumerable<string> DestingationProperties { get; private set; }
+        public IEnumerable<string> DestinationProperties { get; private set; }
 
         public bool Revert { get; private set; }
 
         public PropertyMappingValue(IEnumerable<string> destinationProperties,
             bool revert = false)
         {
-            DestingationProperties = destinationProperties;
+            DestinationProperties = destinationProperties;
             Revert = revert;
         }
     }
